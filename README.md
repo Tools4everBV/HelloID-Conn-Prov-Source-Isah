@@ -40,20 +40,21 @@ As this connector is created for one implementation, it's possible these setting
 ### Prerequisites
 
 - [ ] HelloID Provisioning agent (on-prem).
-- [ ] Scheduled exports of personel data from Isah.
+- [ ] Scheduled exports of personel data in JSON format from Isah.
 
 ## Remarks
 
-This connector is tailor made and based on a export a customer provided. The connector will need to be modified to support other implementations.
+- This connector is tailor made and based on a export a customer provided. The connector will need to be modified to support other implementations.
+- The connector creates extra contracts in HelloID based on the definition of optional 'RBAC roles'. Each defined RBAC role is assigned its own contract.
+- If the EndDate of role is later than the actual enddate of the contract, the connector sets the enddate of the role to the enddate of the contract.
 
 ### Mappings
-A mapping is provided. Make sure to further customize these accordingly.
-Please choose the default mappingset to use with the configured configuration.
+A mapping export is provided. Make sure to further customize these accordingly.
 
 ## Getting help
->
-> _For more information on how to configure a HelloID PowerShell connector, please refer to our [documentation](https://docs.helloid.com/en/provisioning/source-systems.html) pages_
+> _For more information on how to configure a HelloID PowerShell connector, please refer to our [documentation](https://docs.helloid.com/hc/en-us/articles/360012558020-Configure-a-custom-PowerShell-target-system) pages_
 
-## HelloID Docs
+> _If you need help, feel free to ask questions on our [forum](https://forum.helloid.com)_
 
-The official HelloID documentation can be found at: <https://docs.helloid.com/>
+## HelloID docs
+The official HelloID documentation can be found at: https://docs.helloid.com/

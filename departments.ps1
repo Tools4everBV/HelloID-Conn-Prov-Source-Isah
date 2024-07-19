@@ -1,6 +1,6 @@
 try {
     $config = $configuration | ConvertFrom-Json
-    $pathList = @($config.jsonNL,$config.jsonMY,$config.jsonSG)
+    $pathList = @($config.jsonNL, $config.jsonMY, $config.jsonSG)
 
     $isahPersons = [System.Collections.ArrayList]@()
     foreach ($path in $pathList) {
@@ -14,9 +14,9 @@ try {
 
     foreach ($isahDepartment in $isahDepartmentList) {
         $department = [PscustomObject]@{
-            ExternalId = $isahDepartment.Department.ExternalId
-            DisplayName = $isahDepartment.Department.DisplayName
-            ParentExternalId = $null
+            ExternalId        = $isahDepartment.Department.ExternalId
+            DisplayName       = $isahDepartment.Department.DisplayName
+            ParentExternalId  = $null
             ManagerExternalId = $null
         }
 
@@ -27,7 +27,8 @@ try {
     foreach ($department in $departmentListGrouped) {
         Write-Output $department.Group[0] | Get-Unique | ConvertTo-Json
     }
-} catch {
+}
+catch {
     $ex = $PSItem
     $verboseErrorMessage = $ex.Exception.Message
     $auditErrorMessage = $ex.Exception.Message
