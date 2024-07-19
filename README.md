@@ -1,1 +1,59 @@
+# HelloID-Conn-Prov-Source-Isah
 
+| :information_source: Information |
+|:---------------------------|
+| This repository contains the connector and configuration code only. The implementer is responsible to acquire the connection details such as username, password, certificate, etc. You might even need to sign a contract or agreement with the supplier before implementing this connector. Please contact the client's application manager to coordinate the connector requirements.       |
+
+<p align="center">
+  <img src="https://www.tools4ever.nl/connector-logos/isah-logo.png" alt="Isah logo">
+</p>
+
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
+
+- [HelloID-Conn-Prov-Source-Isah](#helloid-conn-prov-source-isah)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Getting Started](#getting-started)
+  - [Remarks](#remarks)
+  - [Getting help](#getting-help)
+  - [HelloID Docs](#helloid-docs)
+
+## Introduction
+
+This connector imports JSON-files generated in Isah to HelloID.
+
+## Getting Started
+
+By using this connector you will have the ability to retrieve employee and contract data from the Isah system.
+
+### Connection settings
+
+As this connector is created for one implementation, it's possible these settings have to be changed.
+
+| Setting         | Description                                   | Mandatory   |
+| --------------- | --------------------------------------------- | ----------- |
+| JSON Netherlands Path         | The full path of the json file for this Isah database | Yes         |
+| JSON Malaysia Path          | The full path of the json file for this Isah database | Yes         |
+| JSON Singapore Path | The full path of the json file for this Isah database | Yes         | 
+
+### Prerequisites
+
+- [ ] HelloID Provisioning agent (on-prem).
+- [ ] Scheduled exports of personel data from Isah.
+
+## Remarks
+
+This connector is tailor made and based on a export a customer provided. The connector will need to be modified to support other implementations.
+
+### Mappings
+A mapping is provided. Make sure to further customize these accordingly.
+Please choose the default mappingset to use with the configured configuration.
+
+## Getting help
+>
+> _For more information on how to configure a HelloID PowerShell connector, please refer to our [documentation](https://docs.helloid.com/en/provisioning/source-systems.html) pages_
+
+## HelloID Docs
+
+The official HelloID documentation can be found at: <https://docs.helloid.com/>

@@ -1,0 +1,29 @@
+[
+    {
+      "key": "jsonNL",
+      "type": "input",
+      "defaultValue": "",
+      "templateOptions": {
+        "label": "JSON Netherlands Path",
+        "required": true
+      }
+    },
+    {
+      "key": "jsonMY",
+      "type": "input",
+      "defaultValue": "",
+      "templateOptions": {
+        "label": "JSON Malaysia Path",
+        "required": true
+      }
+    },
+    {
+      "key": "jsonSG",
+      "type": "input",
+      "defaultValue": "",
+      "templateOptions": {
+        "label": "JSON Singapore Path",
+        "required": true
+      }
+    }
+  ]

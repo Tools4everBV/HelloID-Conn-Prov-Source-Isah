@@ -1,0 +1,238 @@
+{
+    "personMappings": [
+        {
+            "name": "Contact.Business.Address.Country",
+            "mode": "field",
+            "value": "Contact.Business.Address.Country",
+            "validation": {
+                "required": false
+            }
+        },
+        {
+            "name": "Contact.Business.Address.HouseNumber",
+            "mode": "field",
+            "value": "Contact.Business.Address.HouseNumber",
+            "validation": {
+                "required": false
+            }
+        },
+        {
+            "name": "Contact.Business.Address.Locality",
+            "mode": "field",
+            "value": "Contact.Business.Address.City",
+            "validation": {
+                "required": false
+            }
+        },
+        {
+            "name": "Contact.Business.Address.PostalCode",
+            "mode": "field",
+            "value": "Contact.Business.Address.PostalCode",
+            "validation": {
+                "required": false
+            }
+        },
+        {
+            "name": "Contact.Business.Address.Street",
+            "mode": "field",
+            "value": "Contact.Business.Address.Street",
+            "validation": {
+                "required": false
+            }
+        },
+        {
+            "name": "Contact.Business.Email",
+            "mode": "field",
+            "value": "Contact.Business.Email",
+            "validation": {
+                "required": false
+            }
+        },
+        {
+            "name": "Contact.Business.Phone.Fixed",
+            "mode": "field",
+            "value": "Contact.Business.Phone",
+            "validation": {
+                "required": false
+            }
+        },
+        {
+            "name": "Contact.Business.Phone.Mobile",
+            "mode": "field",
+            "value": "Contact.Business.Mobile",
+            "validation": {
+                "required": false
+            }
+        },
+        {
+            "name": "Details.Gender",
+            "mode": "complex",
+            "value": "function getGender() {\r\n    let Gender = \"\"\r\n    switch(source.Details.Gender) {\r\n        case '1':\r\n            Gender =  'M'\r\n            break;\r\n        case '2':\r\n            Gender =  'F'\r\n            break;\r\n        default:\r\n            Gender =  'U';\r\n            break;\r\n    }\r\n    return Gender\r\n}\r\n\r\ngetGender()",
+            "validation": {
+                "required": false
+            }
+        },
+        {
+            "name": "ExternalId",
+            "mode": "field",
+            "value": "ExternalId",
+            "validation": {
+                "required": true
+            }
+        },
+        {
+            "name": "Location.ExternalId",
+            "mode": "field",
+            "value": "Location",
+            "validation": {
+                "required": false
+            }
+        },
+        {
+            "name": "Location.Name",
+            "mode": "field",
+            "value": "Location",
+            "validation": {
+                "required": false
+            }
+        },
+        {
+            "name": "Name.Convention",
+            "mode": "fixed",
+            "value": "B",
+            "validation": {
+                "required": false
+            }
+        },
+        {
+            "name": "Name.FamilyName",
+            "mode": "field",
+            "value": "Name.FamilyName",
+            "validation": {
+                "required": false
+            }
+        },
+        {
+            "name": "Name.GivenName",
+            "mode": "field",
+            "value": "Name.GivenName",
+            "validation": {
+                "required": false
+            }
+        },
+        {
+            "name": "Name.Initials",
+            "mode": "complex",
+            "value": "function formatInitials(initials) {\r\n    let formattedInitials = ''\r\n\r\n    if (initials && initials !== \"\") {\r\n        \r\n        // Remove dots and keep the first 3 characters\r\n        formattedInitials = initials.replace(/\\./g, '')\r\n    }\r\n\r\n    return formattedInitials;\r\n}\r\n\r\nformatInitials(source.Name.Initials);",
+            "validation": {
+                "required": false
+            }
+        },
+        {
+            "name": "Name.NickName",
+            "mode": "field",
+            "value": "Name.GivenName",
+            "validation": {
+                "required": false
+            }
+        },
+        {
+            "name": "UserName",
+            "mode": "field",
+            "value": "UserName",
+            "validation": {
+                "required": false
+            }
+        }
+    ],
+    "contractMappings": [
+        {
+            "name": "Department.DisplayName",
+            "mode": "field",
+            "value": "Department.DisplayName",
+            "validation": {
+                "required": false
+            }
+        },
+        {
+            "name": "Department.ExternalId",
+            "mode": "field",
+            "value": "Department.ExternalId",
+            "validation": {
+                "required": false
+            }
+        },
+        {
+            "name": "Details.Sequence",
+            "mode": "field",
+            "value": "Sequence",
+            "validation": {
+                "required": false
+            }
+        },
+        {
+            "name": "EndDate",
+            "mode": "field",
+            "value": "EndDate",
+            "validation": {
+                "required": false
+            }
+        },
+        {
+            "name": "ExternalId",
+            "mode": "field",
+            "value": "ExternalId",
+            "validation": {
+                "required": false
+            }
+        },
+        {
+            "name": "Manager.ExternalId",
+            "mode": "field",
+            "value": "Manager.PersonId",
+            "validation": {
+                "required": false
+            }
+        },
+        {
+            "name": "StartDate",
+            "mode": "field",
+            "value": "StartDate",
+            "validation": {
+                "required": true
+            }
+        },
+        {
+            "name": "Team.ExternalId",
+            "mode": "field",
+            "value": "Team.id",
+            "validation": {
+                "required": false
+            }
+        },
+        {
+            "name": "Team.Name",
+            "mode": "field",
+            "value": "Team.name",
+            "validation": {
+                "required": false
+            }
+        },
+        {
+            "name": "Title.ExternalId",
+            "mode": "field",
+            "value": "Title.ExternalId",
+            "validation": {
+                "required": false
+            }
+        },
+        {
+            "name": "Title.Name",
+            "mode": "field",
+            "value": "Title.Name",
+            "validation": {
+                "required": false
+            }
+        }
+    ]
+}
